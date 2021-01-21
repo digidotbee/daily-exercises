@@ -44,12 +44,9 @@ document.querySelector('#question3').innerHTML= question3
 //of 3 images found in the albums object by using DOM manipulation
 
 const question4 =
-albums.cats.map (function(pic){
- return `
- <div class = "album-pics">
-     <img src = "${albums.cats[0]})">
- </div>
- `
+
+ albums.ducks.map((pics) => {
+  return `<img src = "${pics}">`
 })
 
 document.querySelector('#question4').innerHTML= question4

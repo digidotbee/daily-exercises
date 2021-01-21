@@ -7,3 +7,8 @@
 #question3 {
     display: flex;
 }
+
+#question4 {
+    display: flex;
+    flex-wrap: wrap;
+}
