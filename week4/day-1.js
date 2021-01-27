@@ -36,10 +36,12 @@ console.assert(o3 == true);
 //set o4 to a function that checks if the object "book" is released
 //after 2012, if so have it return true
 
+let year = book.release
 
-let o4= 
-if (book.release >= 2012) {
-  return true
+let o4 = function() {
+  if (year > 2012) {
+    return true
+  }
 }
 
 console.log (o4)
