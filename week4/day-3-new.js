@@ -16,7 +16,7 @@ multiplication.addEventListener("submit", function (e) {
   if (answer.value == "multiply") {  
     alert (num1.textContent * num2.textContent)
   } else {
-    alert ('Clean your room. -Your Mom')
+    alert ('Eat more vegetable. -Mom')
   }
 
 });
