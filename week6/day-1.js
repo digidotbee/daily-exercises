@@ -20,21 +20,36 @@ const person = {
 // using object destructuring below
 // set these variables to be the following
 
+const {firstName, lastName, age} = person
+
+console.log(firstName)
+console.log(lastName)
+console.log(age)
 
 
 console.assert(firstName === 'john')
 console.assert(lastName === 'smith')
 console.assert(age === 42)
+
+
 const arr = [3434,34343,112]
 // using array destructuring below
-// set these variables to be the following
+// set these variables to be the following:
+
+const [one, two, three] = arr
+console.log (one)
+
+
 console.assert(one === 3434)
 console.assert(two === 34343)
 console.assert(three === 112)
 // using the spread operator
 // make a copy of the object above (person)
 // also add hairColor blue
-const copyWithHair = null
+
+const copyWithHair = {...person, hairColor: 'blue'}
+console.log(copyWithHair)
+
 console.assert(
     objectsAreEqual(
         copyWithHair, 
@@ -46,6 +61,7 @@ console.assert(
         }
     )
 )
+
 // factorial
 // make a function factorial
 // that takes a number and returns the factorial of it
@@ -53,15 +69,26 @@ console.assert(
 // 3 factorial: 3 * 2 * 1
 // 0 factorial is 1
 // etc...
-function factorial(number) {
-}
-console.assert(factorial(5) === 120)
-console.assert(factorial(4) === 24)
-console.assert(factorial(3) === 6)
+
+function factorial(num) {
+    if (num == 0 || num == 1)
+        return 1
+    for (let i = num - 1; i >= 1; i-- ){
+            num*= i;
+        }
+        return num
+    }
+
+// console.log(factorial(5))
+// console.assert(factorial(5) === 120)
+// console.assert(factorial(4) === 24)
+// console.assert(factorial(3) === 6)
 // make a function grabKey
 // that takes an object and a string and grabs the key of the object
 function grabKey(obj, key) {
+    return Object.keys(obj).find(key => obj[key] === value)
 }
+
 console.assert(grabKey({name: 'susan'}, 'name') === 'susan')
 console.assert(grabKey({age: 33}, 'age') === 33)
 // make a function addUpTo
@@ -70,8 +97,20 @@ console.assert(grabKey({age: 33}, 'age') === 33)
 // addUp(4) ➞ 10
 // addUp(13) ➞ 91
 // addUp(600) ➞ 180300
+
+function addUpTo(num) {
+    let nested = 0
+    for (let i = num; i >= 1; i--) {
+        nested = nested + i
+    }
+    return nested
+}
+console.log(nested(4))
+
 // make a function minutesToSeconds
 // takes a number
+
+
 function minutesToSeconds(number) {
 }
 console.assert(minutesToSeconds(3) === 180)
