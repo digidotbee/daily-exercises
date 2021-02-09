@@ -85,12 +85,12 @@ function factorial(num) {
 // console.assert(factorial(3) === 6)
 // make a function grabKey
 // that takes an object and a string and grabs the key of the object
-function grabKey(obj, key) {
-    return Object.keys(obj).find(key => obj[key] === value)
-}
+
 
 console.assert(grabKey({name: 'susan'}, 'name') === 'susan')
 console.assert(grabKey({age: 33}, 'age') === 33)
+
+
 // make a function addUpTo
 // takes a number and adds up to it
 // IE input 4: 1 + 2 + 3 + 4
@@ -117,7 +117,19 @@ console.assert(minutesToSeconds(3) === 180)
 console.assert(minutesToSeconds(2) === 120)
 // collect letters
 // make a function that makes an object of letters and their count in the string...
-function collectLetters(str) {
-}
+
 const letterMap = collectLetters('aaba')
+
+function letterCount (str) {
+    let newObj = {}
+    for (let i = 0; i < str.length; i++) {
+        if (!newObj[letter]) {
+            newObj[letter] = 1
+        } else {
+            newObj[letter]++
+        }
+    }
+    return newObj
+}
+
 console.assert(objectsAreEqual(letterMap, {a: 3, b: 1}))
